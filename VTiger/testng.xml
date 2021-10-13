@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Vtiger.comcast.organization.TC003CreateContact"/>
+      <class name="com.Vtiger.comcast.organization.TC004CreateContact"/>
+      <class name="com.Vtiger.comcast.organization.TC05CreateContact2"/>
+      <class name="com.Vtiger.comcast.organization.TC02CreateContact2"/>
+      <class name="com.Vtiger.comcast.organization.TC_001CreateContact"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
