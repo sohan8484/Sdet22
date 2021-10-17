@@ -1,8 +1,11 @@
 package com.Vtiger.comcast.contacts;
 
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.crm.vtiger.genericUtils.FileUtility;
@@ -12,7 +15,7 @@ import com.vtiger.POMrepository.Contacts;
 import com.vtiger.POMrepository.CreateNewContact;
 import com.vtiger.POMrepository.Home;
 import com.vtiger.POMrepository.LoginToVtiger;
-
+@Listeners(com.crm.vtiger.genericUtils.ListenersClass.class)
 public class TC_001CreateContact {
 	@Test
 	/*
@@ -66,6 +69,8 @@ public class TC_001CreateContact {
 		}
 		else
 			System.out.println("contact is not created ");
+		
+		assertEquals("a", "b");
 		
 		/*log out*/
 		homePage.logout();

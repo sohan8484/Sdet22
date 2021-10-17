@@ -1,6 +1,8 @@
 package com.Vtiger.comContacts.xml;
 
 
+//import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -25,9 +27,13 @@ public class TC_01createContact extends BaseClass{
 	CreateNewContact cnc = new CreateNewContact(driver);
 	String contName="comcast_1";
 	cnc.createCont(contName);
+	
+//	assertEquals("l", "p");
 	/*varify*/
 	ContactInfo info = new ContactInfo(driver);
 	wLib.waitForElementVisiblity(driver, info.getSuccessfullMsg());
+	
+	
 	
 	String actualMsg=info.getSuccessfullMsg().getText();
 	if(actualMsg.contains(contName)) {
