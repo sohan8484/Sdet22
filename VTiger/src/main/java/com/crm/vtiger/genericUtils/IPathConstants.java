@@ -3,7 +3,7 @@ package com.crm.vtiger.genericUtils;
 public interface IPathConstants {
 	String PROPERTY_FILEPATH="./Data/CommonData.properties";
 	String JSONFILEPATH="./Data/CommonData.json";
-	String EXCELPATH="./Data/ExcelFiile.xlsx";
+	String EXCELPATH="./Data/Book1.xlsx";
 	String FILEPATH="./Data/Contacts1.csv";
 	String PHOTO="./Data/uploadPhoto.jpg";
 }

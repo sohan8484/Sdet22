@@ -34,7 +34,7 @@ public class SearchAndVarifyInContacts extends WebDriverUtility{
 		getTextBox().sendKeys(orgName1);
 		driver.findElement(By.name("submit")).click();
 
-		boolean name = driver.findElement(By.xpath("//a[.='Last Name']/../../../../../../../td/div/table/tbody/tr[3]")).isDisplayed();
+		boolean name = driver.findElement(By.xpath("//table[@class='lvt small']/tbody/tr[3]/td[2]")).isDisplayed();
 		if(name==true) {
 			System.out.println("contact upload success");
 

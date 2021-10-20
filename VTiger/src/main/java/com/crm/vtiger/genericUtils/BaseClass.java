@@ -25,19 +25,15 @@ public class BaseClass {
 	public JavaUtility jLib = new JavaUtility();
 	public WebDriverUtility wLib = new WebDriverUtility();
 	
-	
-	
 	@BeforeSuite(groups = {"smoketest"})
 	public void connectDB() throws Throwable
 	{
 		System.out.println("db suceeesss");
 	}
+	
 	@Parameters(value= {"browser"})
 	@BeforeClass(groups = {"smoketest"})
 	public void launchBrowser(@Optional("chrome") String BROWSER) throws Throwable {
-
-		
-	//	String BROWSER = fLib.getPropertyKeyValue("browser");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -53,6 +49,7 @@ public class BaseClass {
 		String URL=fLib.getPropertyKeyValue("url");
 		driver.get(URL);
 	}
+	
 	@BeforeMethod(groups = {"smoketest"})
 	public void login() throws Throwable {
 		LoginToVtiger login=new LoginToVtiger(driver);
@@ -61,7 +58,6 @@ public class BaseClass {
 		login.loginToApp(USERNAME, PASSWORD);
 		wLib.waitUntilPageLoad(driver);
 	}
-	
 	
 	@AfterMethod(groups = {"smoketest"})
 	public void logout() {
