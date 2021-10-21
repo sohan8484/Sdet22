@@ -2,9 +2,12 @@ package com.crm.vtiger.genericUtils;
 
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -24,7 +27,8 @@ public class BaseClass {
 	public FileUtility fLib = new FileUtility();
 	public JavaUtility jLib = new JavaUtility();
 	public WebDriverUtility wLib = new WebDriverUtility();
-	
+	public EventFiringWebDriver eventDriver;
+
 	@BeforeSuite(groups = {"smoketest"})
 	public void connectDB() throws Throwable
 	{
@@ -48,11 +52,18 @@ public class BaseClass {
 		wLib.waitUntilPageLoad(driver);
 		String URL=fLib.getPropertyKeyValue("url");
 		driver.get(URL);
+		WebDriverListner regDriver= new WebDriverListner();
+		eventDriver=new EventFiringWebDriver(driver);
+		eventDriver.register(regDriver);
 	}
 	
 	@BeforeMethod(groups = {"smoketest"})
 	public void login() throws Throwable {
 		LoginToVtiger login=new LoginToVtiger(driver);
+		System.out.println("Logging In to Vtiger");
+//		eventDriver.get("http://localhost:8888");
+//		eventDriver.findElement(By.name("user_name")).sendKeys("admin");
+//		eventDriver.findElement(By.name("user_password")).sendKeys("manager", Keys.ENTER);
 		String USERNAME=fLib.getPropertyKeyValue("username");
 		String PASSWORD=fLib.getPropertyKeyValue("password");
 		login.loginToApp(USERNAME, PASSWORD);
@@ -67,10 +78,12 @@ public class BaseClass {
 	
 	@AfterClass(groups = {"smoketest"})
 	public void closeBrowser() {
-		driver.close();
+		System.out.println("closing browser");
+		eventDriver.close();
+//		driver.close();
 	}
 	@AfterSuite(groups = {"smoketest"})
 	public void closeDB() {
-		System.out.println("closed success");
+		System.out.println("closed DB success");
 	}
 }
