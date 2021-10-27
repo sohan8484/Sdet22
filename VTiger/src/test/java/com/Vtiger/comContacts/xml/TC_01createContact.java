@@ -3,6 +3,7 @@ package com.Vtiger.comContacts.xml;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -35,8 +36,9 @@ public class TC_01createContact extends BaseClass{
 		/*varify*/
 		ContactInfo info = new ContactInfo(driver);
 		wLib.waitForElementVisiblity(driver, info.getSuccessfullMsg());
-		String actualMsg=info.getSuccessfullMsg().getText();
-		String actual="contact is created successfully ";
-		Assert.assertEquals(actual, actualMsg);
+		String name=info.getLastName().getText();
+		
+	//	String actual="Contact Information";
+		Assert.assertEquals(name, contName);
 	}
 }

@@ -1,5 +1,6 @@
 package com.vtiger.POMrepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,13 @@ public class ContactInfo {
 	@FindBy(xpath="//span[contains(text(),//span[.='[ CON12 ] q  -  Contact Information'])]")
 	private WebElement headerName;
 	
+	@FindBy(id = "dtlview_Last Name")
+	private WebElement lastName;
+	
+	public WebElement getLastName() {
+		return lastName;
+	}
+
 	public WebElement getHeaderName() {
 		return headerName;
 	}

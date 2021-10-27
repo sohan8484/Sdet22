@@ -17,7 +17,6 @@ public class CreateNewContact extends WebDriverUtility{
 	@FindBy(name="lastname")
 	private WebElement contNameEdt;
 	
-	
 	@FindBy(xpath="//input[@name='account_name']/following-sibling::img")
 	private WebElement contNameLookUpIcon;
 
