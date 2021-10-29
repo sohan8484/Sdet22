@@ -2,19 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32262" started-at="2021-10-24T14:09:21 IST" finished-at="2021-10-24T14:09:53 IST">
+  <suite name="Default suite" duration-ms="38490" started-at="2021-10-27T11:51:58 IST" finished-at="2021-10-27T11:52:36 IST">
     <groups>
-      <group name="smoketest">
-        <method signature="TC_01createContact.createContact()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="createContact" class="com.Vtiger.comContacts.xml.TC_01createContact"/>
-      </group> <!-- smoketest -->
     </groups>
-    <test name="Default test" duration-ms="32262" started-at="2021-10-24T14:09:21 IST" finished-at="2021-10-24T14:09:53 IST">
-      <class name="com.Vtiger.comContacts.xml.TC_01createContact">
-        <test-method status="PASS" signature="connectDB()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="connectDB" is-config="true" duration-ms="28" started-at="2021-10-24T14:09:21 IST" finished-at="2021-10-24T14:09:21 IST">
+    <test name="Default test" duration-ms="38490" started-at="2021-10-27T11:51:58 IST" finished-at="2021-10-27T11:52:36 IST">
+      <class name="com.Vtiger.comContacts.xml.TC_02createContact">
+        <test-method status="PASS" signature="connectDB()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="connectDB" is-config="true" duration-ms="13" started-at="2021-10-27T11:51:58 IST" finished-at="2021-10-27T11:51:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- connectDB -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="launchBrowser" is-config="true" duration-ms="6007" started-at="2021-10-24T14:09:21 IST" finished-at="2021-10-24T14:09:27 IST">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="launchBrowser" is-config="true" duration-ms="5938" started-at="2021-10-27T11:51:58 IST" finished-at="2021-10-27T11:52:04 IST">
           <params>
             <param index="0">
               <value>
@@ -25,27 +22,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="login" is-config="true" duration-ms="7136" started-at="2021-10-24T14:09:27 IST" finished-at="2021-10-24T14:09:35 IST">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="login" is-config="true" duration-ms="7259" started-at="2021-10-27T11:52:04 IST" finished-at="2021-10-27T11:52:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="createContact()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="createContact" duration-ms="16545" started-at="2021-10-24T14:09:35 IST" finished-at="2021-10-24T14:09:51 IST">
+        <test-method status="PASS" signature="executingTestCase()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="executingTestCase" duration-ms="22985" started-at="2021-10-27T11:52:11 IST" finished-at="2021-10-27T11:52:34 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContact -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="logout" is-config="true" duration-ms="1831" started-at="2021-10-24T14:09:51 IST" finished-at="2021-10-24T14:09:53 IST">
+        </test-method> <!-- executingTestCase -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="logout" is-config="true" duration-ms="1928" started-at="2021-10-27T11:52:34 IST" finished-at="2021-10-27T11:52:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="closeBrowser" is-config="true" duration-ms="176" started-at="2021-10-24T14:09:53 IST" finished-at="2021-10-24T14:09:53 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="closeBrowser" is-config="true" duration-ms="302" started-at="2021-10-27T11:52:36 IST" finished-at="2021-10-27T11:52:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="closeDB()[pri:0, instance:com.Vtiger.comContacts.xml.TC_01createContact@7e0e6aa2]" name="closeDB" is-config="true" duration-ms="1" started-at="2021-10-24T14:09:54 IST" finished-at="2021-10-24T14:09:54 IST">
+        <test-method status="PASS" signature="closeDB()[pri:0, instance:com.Vtiger.comContacts.xml.TC_02createContact@396e2f39]" name="closeDB" is-config="true" duration-ms="1" started-at="2021-10-27T11:52:36 IST" finished-at="2021-10-27T11:52:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDB -->
-      </class> <!-- com.Vtiger.comContacts.xml.TC_01createContact -->
+      </class> <!-- com.Vtiger.comContacts.xml.TC_02createContact -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

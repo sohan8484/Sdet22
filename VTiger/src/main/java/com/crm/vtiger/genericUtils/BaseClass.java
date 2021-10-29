@@ -20,6 +20,8 @@ import org.testng.annotations.Parameters;
 import com.vtiger.POMrepository.Home;
 import com.vtiger.POMrepository.LoginToVtiger;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 	public static WebDriver StaticDriver;
 	public WebDriver driver=null;
@@ -40,6 +42,7 @@ public class BaseClass {
 	public void launchBrowser(@Optional("chrome") String BROWSER) throws Throwable {
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
 		else if(BROWSER.equalsIgnoreCase("firefox")) {

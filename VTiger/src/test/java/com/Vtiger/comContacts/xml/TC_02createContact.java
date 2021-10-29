@@ -41,7 +41,7 @@ public class TC_02createContact extends BaseClass{
 		cnc.createContct(orgName+"_"+JavaUtility.getRandomData());
 
 		/*add organization to the contact page*/
-
+		
 		homePage.getContNameLookUpIcon().click();
 		cnc.switchToWindow(driver,"Contacts&action");
 		

@@ -19,6 +19,7 @@ public class TC_01createContact extends BaseClass{
 
 	@Test(groups = {"smoketest"})
 	public void createContact() {
+
 		/*navigate to contact module*/
 		Home homePage=new Home(driver);
 		homePage.getContactLinks().click();
