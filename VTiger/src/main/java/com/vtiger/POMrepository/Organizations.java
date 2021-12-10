@@ -11,6 +11,9 @@ public class Organizations {
 	}
 	@FindBy(name = "accountname")
 	private WebElement orgName;
+	@FindBy(name="search")
+	private WebElement searchBtn;
+
 	
 	public WebElement getOrgName() {
 		return orgName;
