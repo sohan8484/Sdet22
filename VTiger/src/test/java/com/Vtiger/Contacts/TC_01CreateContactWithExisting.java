@@ -40,5 +40,5 @@ public class TC_01CreateContactWithExisting extends BaseClass{
 
 		//	select email check box
 		createContact.getEmailCheckBox().click();
-	}	
+		}	
 }
